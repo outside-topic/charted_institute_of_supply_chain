@@ -211,6 +211,80 @@ ul, ol {
     color: white;
 }
 
+/* ==========================================================================
+   About Page Styles Start
+   ========================================================================== */
+
+.page-hero {
+    background: linear-gradient(rgba(13, 71, 161, 0.9), rgba(13, 71, 161, 0.9)), url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    color: white;
+    text-align: center;
+}
+
+.page-hero h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.vision-mission-card {
+    background: var(--bg-white);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    height: 100%;
+    border-top: 5px solid var(--primary-color);
+    transition: var(--transition-smooth);
+}
+
+.vision-mission-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.philosophy-bg {
+    background: var(--bg-light);
+    border-radius: 20px;
+    padding: 50px;
+    border-left: 8px solid var(--primary-color);
+}
+
+.industry-item {
+    background: var(--bg-white);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.industry-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.industry-item:hover {
+    background: var(--primary-color);
+    color: white !important;
+}
+
+.industry-item:hover i {
+    color: white;
+}
+
+.industry-item span {
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   About Page Styles End
+   ========================================================================== */
+
 /* Footer Styling */
 footer {
     background: var(--bg-dark);
