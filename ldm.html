@@ -38,44 +38,111 @@
         </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg sticky-top">
+    <!-- Tier 1: Utility Top Bar -->
+    <div class="utility-nav py-2 d-none d-lg-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="utility-info">
+                <span class="me-3 small text-muted"><i class="fas fa-envelope text-primary-custom me-2"></i>info@ciscm-global.org</span>
+                <span class="small text-muted"><i class="fas fa-phone text-primary-custom me-2"></i>+1 (800) 123 4567</span>
+            </div>
+            <ul class="utility-links d-flex list-unstyled mb-0 gap-4">
+                <li><a href="about.html" class="small text-muted text-decoration-none hover-primary">About</a></li>
+                <li><a href="resources.html" class="small text-muted text-decoration-none hover-primary">Resources Hub</a></li>
+                <li><a href="clients-partnerships.html" class="small text-muted text-decoration-none hover-primary">Clients & Partnerships</a></li>
+                <li><a href="careers-development.html" class="small text-muted text-decoration-none hover-primary">Career Development</a></li>
+                <li><a href="contact.html" class="small text-muted text-decoration-none hover-primary">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Tier 2: Main Branding Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top main-navbar">
         <div class="container">
-            <a class="navbar-brand logo-placeholder" href="index.html">
-                <span>CISCM</span> 
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="logo-box me-2" style="width: 45px; height: 45px; background: var(--primary-color); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 1.2rem;">C</div>
+                <div class="brand-text">
+                    <span class="d-block fw-bold text-dark" style="line-height:1.2; font-size: 1.1rem;">CISCM</span>
+                    <span class="d-block text-muted small uppercase-tracking" style="font-size: 0.65rem; letter-spacing: 1.5px;">Global Institute</span>
+                </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="programs.html">Programs</a></li>
-                    <li class="nav-item"><a class="nav-link" href="delivery-modes.html">Delivery Modes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="corporate-training.html">Corporate</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#membership">Membership</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+
+            <div class="collapse navbar-collapse" id="mainNavContent">
+                <ul class="navbar-nav ms-auto align-items-center py-3 py-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item d-lg-none d-block"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item d-lg-none d-block"><a href="resources.html" class="nav-link">Resources Hub</a></li>
+                    
+                    
+                    <!-- Programs Mega Dropdown -->
+                    <li class="nav-item dropdown dropdown-mega position-static">
+                        <a class="nav-link dropdown-toggle" href="programs.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Programs
+                        </a>
+                        <div class="dropdown-menu mega-menu-content border-0 shadow-lg p-4">
+                            <div class="row g-4 mega_menu_wrap">
+                                <div class="col-lg-4">
+                                    <h6 class="fw-bold text-primary-custom mb-3 border-bottom pb-2">Professional Certifications</h6>
+                                    <ul class="list-unstyled mega-list">
+                                        <li><a class="dropdown-item rounded-3 mb-1 p-2" href="scf.html">Supply Chain Fundamentals</a></li>
+                                        <li><a class="dropdown-item rounded-3 mb-1 p-2" href="pst.html">Procurement & Sourcing Training</a></li>
+                                        <li><a class="dropdown-item rounded-3 mb-1 p-2" href="ldm.html">Logistics & Distribution Management</a></li>
+                                        <li><a class="dropdown-item rounded-3 mb-1 p-2" href="wim.html">Warehouse & Inventory Management</a></li>
+                                        <li><a class="dropdown-item rounded-3 mb-1 p-2" href="scm.html">Supply Chain Analytics</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <h6 class="fw-bold text-info mb-3 border-bottom pb-2">Advanced Modules</h6>
+                                    <ul class="list-unstyled mega-list">
+                                        <li><a class="dropdown-item rounded-3 mb-1 p-2" href="sscm.html">Sustainable SCM</a></li>
+                                        <li><a class="dropdown-item rounded-3 mb-1 p-2" href="scrr.html">SC Risk & Resilience</a></li>
+                                    </ul>
+                                    <h6 class="fw-bold text-secondary mb-3 border-bottom pb-2 mt-4">Corporate & Executive</h6>
+                                    <ul class="list-unstyled mega-list">
+                                        <li><a class="dropdown-item rounded-3 mb-1 p-2" href="corporate-training.html">Corporate Training Solutions</a></li>
+                                        <li><a class="dropdown-item rounded-3 mb-1 p-2" href="executive_leadership_prog.html">Executive & Leadership</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 d-none d-lg-block">
+                                    <div class="mega-highlight-card h-100 rounded-4 p-4 text-white d-flex flex-column justify-content-end" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=2070'); background-size: cover; min-height: 250px;">
+                                        <h5 class="fw-bold mb-2">Build Your Future</h5>
+                                        <p class="small opacity-75 mb-3">Explore our world-class curricula designed for modern industry challenges.</p>
+                                        <a href="programs.html" class="btn btn-primary-custom btn-sm rounded-pill w-fit">View All Programs</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="delivery-modes.html">Modes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="short-courses.html">Short Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="served_industry.html">Served Industries</a>
+                    </li>
+                    
+                    <li class="nav-item d-lg-none d-block"><a href="clients-partnerships.html" class="nav-link">Clients & Partnerships</a></li>
+                    <li class="nav-item d-lg-none d-block"><a href="careers-development.html" class="nav-link">Career Development</a></li>
+                    <li class="nav-item d-lg-none d-block"><a href="contact.html" class="nav-link">Contact Us</a></li>
+
+                    <li class="nav-item ms-lg-4 mt-3 mt-lg-0">
+                        <button type="button" class="btn btn-primary-custom btn-pill-elite px-4 py-2" data-bs-toggle="modal" data-bs-target="#applyModal">
+                            Apply Today <i class="fas fa-arrow-right small ms-2"></i>
+                        </button>
+                    </li>
                 </ul>
-                <a href="#" class="btn btn-primary-custom ms-lg-3">Apply Now</a>
             </div>
         </div>
     </nav>
-
-    <!-- Page Hero -->
-    <section class="page-hero">
-        <div class="container">
-            <div class="badge bg-secondary-custom text-white mb-2 px-3 py-2 rounded-pill small fw-bold">FOUNDATION LEVEL</div>
-            <h1 class="display-4 fw-bold">Logistics & Distribution Management</h1>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb justify-content-center bg-transparent p-0">
-                    <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
-                    <li class="breadcrumb-item"><a href="programs.html" class="text-white">Programs</a></li>
-                    <li class="breadcrumb-item active text-white-50" aria-current="page">LDM</li>
-                </ol>
-            </nav>
-        </div>
-    </section>
 
     <!-- Program Content -->
     <section class="section-padding">
