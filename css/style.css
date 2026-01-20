@@ -219,6 +219,133 @@ ol {
     letter-spacing: 1.5px;
 }
 
+/* Premium Footer Redesign */
+.footer-elite {
+    background-color: #050a15 !important;
+    font-family: var(--font-body);
+}
+
+.logo-box-elite {
+    width: 48px;
+    height: 48px;
+    background: var(--primary-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.4rem;
+    box-shadow: 0 4px 15px rgba(13, 71, 161, 0.3);
+}
+
+.letter-spacing-1 { letter-spacing: 1px; }
+.letter-spacing-2 { letter-spacing: 2px; }
+
+.social-icon-link {
+    width: 38px;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.social-icon-link:hover {
+    background: var(--primary-color);
+    color: #fff;
+    transform: translateY(-3px);
+    border-color: var(--primary-color);
+}
+
+.footer-heading-elite {
+    font-family: var(--font-heading);
+    color: #fff;
+    font-size: 1.1rem;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer-heading-elite::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.footer-nav-elite li {
+    margin-bottom: 12px;
+}
+
+.footer-nav-elite li a {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-nav-elite li a:hover {
+    color: var(--primary-color);
+    padding-left: 8px;
+}
+
+.footer-contact-elite li {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-bottom-elite {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(5px);
+}
+
+.gray-scale-hover span {
+    transition: all 0.3s ease;
+}
+
+.gray-scale-hover:hover span {
+    opacity: 1;
+    color: #fff;
+}
+
+/* Animations & Spacing Fixes */
+.w-fit { width: fit-content; }
+/* The uppercase-tracking class is already defined above, removing duplicate */
+/* .uppercase-tracking { text-transform: uppercase; letter-spacing: 1.5px; } */
+
+@media (max-width: 768px) {
+    .footer-elite {
+        text-align: center;
+    }
+    .footer-brand-elite .d-flex, .social-grid {
+        justify-content: center;
+    }
+    .footer-heading-elite::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-nav-elite li a:hover {
+        padding-left: 0;
+    }
+    .footer-contact-elite li {
+        justify-content: center;
+    }
+    .accreditation-strip {
+        justify-content: center !important;
+        margin-top: 20px;
+    }
+}
+
 /* Mobile Nav Adjustments */
 @media (max-width: 991px) {
     .main-navbar .navbar-collapse {
@@ -1515,6 +1642,10 @@ footer {
     overflow: hidden;
 }
 
+.footer_logo_text{
+    color: rgba(255, 255, 255, 0.5);
+}
+
 footer h5 {
     color: white;
     margin-bottom: 25px;
@@ -1530,3 +1661,105 @@ footer h5 {
     color: var(--primary-light);
     padding-left: 5px;
 }
+/* ==========================================================================
+   Program Categories Section Styles
+   ========================================================================== */
+
+.category-card {
+    border: none;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Soft, premium shadow */
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.category-header {
+    padding: 2.5rem 2rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Specific Gradients for Categories */
+/* Professional Certifications: Blue Gradient */
+.category-card:nth-child(1) .category-header {
+    background: linear-gradient(135deg, #0d47a1 0%, #42a5f5 100%);
+}
+
+/* Advanced Modules: Cyan/Teal Gradient */
+.category-card:nth-child(2) .category-header {
+    background: linear-gradient(135deg, #006064 0%, #00acc1 100%);
+}
+
+/* Corporate & Executive: Red/Crimson Gradient */
+.category-card:nth-child(3) .category-header {
+     background: linear-gradient(135deg, #b71c1c 0%, #e57373 100%);
+}
+
+.category-header i {
+    font-size: 3.5rem;
+    opacity: 0.2;
+    position: absolute;
+    right: 5px;
+    transform: rotate(15deg);
+    transition: all 0.5s ease;
+}
+
+.category-card:hover .category-header i {
+    opacity: 0.4;
+    transform: rotate(0deg) scale(1.1);
+}
+
+.category-body {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0,0,0,0.03);
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+}
+
+.category-list li {
+    margin-bottom: 15px;
+}
+
+.category-list li a {
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    background: rgba(0,0,0,0.01);
+}
+
+.category-list li a:hover {
+    background: rgba(13, 71, 161, 0.05); /* Subtle blue tint on hover */
+    color: var(--primary-color);
+    padding-left: 18px;
+}
+
+.category-list li a i {
+    font-size: 0.8rem;
+    margin-right: 10px;
+    opacity: 0.7;
+    transition: margin-right 0.2s;
+}
+
+.category-list li a:hover i {
+    margin-right: 15px;
+    opacity: 1;
+}
+
